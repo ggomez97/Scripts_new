@@ -1,0 +1,2 @@
+#dbservername    nettype       hostname      servicename      options
+miServidor       onsoctcp      192.168.10.141   informix 
