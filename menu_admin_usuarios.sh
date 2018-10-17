@@ -16,7 +16,8 @@ if [ "$user" != 10 ]
 			if [ "$user" != 1000 ]
 		then
 			echo "No tienes los privilegios necesarios para utilizar esta opcion"
-			exit 1
+			read -n1
+            exit 1
 		fi
 			
 	fi

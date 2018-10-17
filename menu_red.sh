@@ -18,11 +18,16 @@ case $menu_red in
 
 1)echo 
 read -p " Ingrese la IP de host que desea testear: " ping
-ping -c 6 $ping;;
+ping -c 6 $ping
+echo "Presione enter para contitunar"
+        read -n1
+            ;;
 
 2) clear 
-netstat | grep EST;;
-
+netstat | grep EST
+echo "Presione enter para contitunar"
+        read -n1
+            ;;
 0) clear
    bash HMG_main_menu.sh;;
 esac

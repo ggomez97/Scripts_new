@@ -22,13 +22,13 @@ cd /home/its/Scripts
 
 sudo cat login_defs.txt > /etc/login.defs
 
-sudo echo '30 00 * * * root bash /home/gservidor/HMG_scripts/backup.sh' >> /etc/crontab
-sudo echo '00 02 * * * root bash /home/gservidor/HMG_scripts/old_bk.sh' >> /etc/crontab
+sudo echo '30 00 * * * root bash /home/its/Scripts/backup.sh' >> /etc/crontab
+sudo echo '00 02 * * * root bash /home/its/Scripts/old_bk.sh' >> /etc/crontab
 sudo echo '59 00,13 * * 2,3,4,5,6,7 informix ontape -s -L 1 &' >> /etc/crontab
-sudo echo '00 00 * * 1 informix ontape-s -L 0 &' >> /etc/crontab
+sudo echo '00 00 * * 1 informix ontape -s -L 0 &' >> /etc/crontab
 sudo echo '00 00,12 * * * root clamscan --infected --recursive /' >> /etc/crontab
-sudo echo '@reboot root oninit -iv' >> /etc/crontab
-sudo echo '@reboot root bash /opt/ManagerEngine/OpManager/bin/StartOpManagerServer.sh' >> /etc/crontab
+
+
 read -n1
 
 sudo groupadd informix                                    # Crear un grupo llamado informix
@@ -36,7 +36,7 @@ sudo useradd -g informix -d /opt/informix informix            # Crear usuario in
 sudo passwd informix                                      # Asigna una contraseÃ±a del usuario informix
 
 
-sudo usseradd -g /dev/null usuario.invitados
+sudo useradd -d /dev/null usuario.invitados
 sudo usermod -s /bin/false usuario.invitados
 
 sudo groupadd docente
@@ -45,7 +45,8 @@ sudo passwd usuario.docente
 sudo usermod -s /bin/false usuario.docente
  
 sudo groupadd gestion 
-sudo useradd -g gestion -m usuario.gestion
+sudo useradd -g gestion -d /dev/null usuario.gestion
+sudo passwd usuario.gestion
 sudo usermod -s /bin/false usuario.gestion
 
 sudo groupadd administrador 

@@ -42,7 +42,7 @@ case $menu_automatizacion in
 3) clear
     bash menu_datos.sh;;
 4) clear
-    bash clamAV_automatico.sh;;    
+    bash opManager.sh;;    
 0) clear
    bash HMG_main_menu.sh;;
 esac

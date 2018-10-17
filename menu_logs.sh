@@ -29,10 +29,14 @@ while [ "$op" != 0 ]
     
     3)clear 
         sudo last -ain 20;;
-    
+        echo "Presione enter para contitunar"
+        read -n1
+            ;;
     4)clear 
         sudo lastb -ain 20;;
-    
+    echo "Presione enter para contitunar"
+        read -n1
+            ;;
     0)clear
        bash HMG_main_menu.sh;;
     

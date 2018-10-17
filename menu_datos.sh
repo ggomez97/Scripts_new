@@ -25,7 +25,7 @@ echo
 case $menu_datos in
 
 1)clear 
-    sv_config_SO.sh;;
+    dbaccess - 1_Tablas.sql;;
 2) clear 
     menu_informix.sh;;
 3) clear

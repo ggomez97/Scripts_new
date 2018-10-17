@@ -24,7 +24,7 @@ do
            y grupos.
  
  2) Administracion de la
-       Base de Datos.
+       Base de Datos y Backup.
  
  3) Chequeos del Servidor.
  
@@ -53,7 +53,7 @@ case "$Menu" in
     5) clear
         bash menu_red.sh;;
     6) clear
-        bash automatizacion.sh;;
+        bash menu_automatizacion.sh;;
     0) clear
         exit;;    
 esac
