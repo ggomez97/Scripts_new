@@ -55,7 +55,11 @@ case "$Menu" in
     6) clear
         bash menu_automatizacion.sh;;
     0) clear
-        exit;;    
+        exit;;
+    *)clear
+        echo -e '\e[1;31mOpcion invalida, por favor ingrese una opcion del menu 
+        presione enter para continuar\e[0m';;
+            
 esac
 done
 

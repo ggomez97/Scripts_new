@@ -37,5 +37,12 @@ case $menu_rendimiento in
 0) clear 
         bash HMG_main_menu.sh;;
 
+*)clear
+        echo -e '\e[1;31mOpcion invalida, por favor ingrese una opcion del menu 
+        presione enter para continuar\e[0m'
+		read -n1
+		clear;;
+
+
 esac
 done

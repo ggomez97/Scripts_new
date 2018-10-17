@@ -14,5 +14,6 @@ echo
   else
       sudo userdel $username
   fi
-echo
+echo "Presione enter para volver al menu de usuario"
+read -n1
 bash menu_admin_usuarios.sh
