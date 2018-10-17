@@ -10,3 +10,8 @@ echo "Borrando el archivo que se encuentra en /home/gservidor/log_bk/backup$FECH
 	read -n1
 	sudo rm -rf /home/gservidor/log_bk/backup$FECHA.tar
 fi
+
+echo "Presione enter para volver al menu de usuarios"
+     read -n1
+     
+

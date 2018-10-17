@@ -27,7 +27,7 @@ do
   1) Server config.
   2) Informix. 
   3) Datos BD.
-  4) ClamAV (antivirus).
+  4) OpManager.
   0) Volver atras."
     echo
 read -p " Seleccione la opcion deseada: " menu_automatizacion
@@ -45,5 +45,11 @@ case $menu_automatizacion in
     bash opManager.sh;;    
 0) clear
    bash HMG_main_menu.sh;;
+*)clear
+        echo -e '\e[1;31mOpcion invalida, por favor ingrese una opcion del menu 
+                     presione enter para continuar\e[0m'
+		        read -n1
+		clear;;
+             
 esac
 done
