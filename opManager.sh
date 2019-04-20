@@ -17,6 +17,6 @@ read -n1
 
 cd /opt/ManagerEngine/OpManager/bin/
 
-bash StartOpManager.sh
+bash StartOpManagerServer.sh
 
-sudo echo '@reboot root sleep 1 bash /opt/ManagerEngine/OpManager/bin/StartOpManagerServer.sh' >> /etc/crontab
+sudo echo '@reboot root sleep 60 && bash /opt/ManagerEngine/OpManager/bin/StartOpManagerServer.sh' >> /etc/crontab
